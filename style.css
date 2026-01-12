@@ -289,23 +289,20 @@ header {
     min-width: 300px;
 }
 
-/* Revamping the circle placeholder to something more interesting */
-.profile-placeholder {
+/* Profile Picture */
+.profile-picture {
     width: 350px;
     height: 350px;
     background: linear-gradient(135deg, var(--bg-secondary) 0%, #e2e8f0 100%);
     border-radius: var(--radius-lg); /* Soft square instead of circle */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 8rem;
     border: 1px solid white;
     box-shadow: var(--shadow-hover);
     transform: rotate(-3deg); /* Slight playful tilt */
     transition: transform 0.3s ease;
+    object-fit: cover; /* Ensure image fits nicely */
 }
 
-.profile-placeholder:hover {
+.profile-picture:hover {
     transform: rotate(0deg) scale(1.02);
 }
 
@@ -671,10 +668,9 @@ footer {
         text-align: center;
     }
     
-    .profile-placeholder {
+    .profile-picture {
         width: 280px;
         height: 280px;
-        font-size: 5rem;
         margin-bottom: 30px;
     }
 
